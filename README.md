@@ -14,7 +14,7 @@
 
 3. Remover produtos: Permitir ao usuário remover um produto da lista selecionando-o. **- OK!**
 
-3.1 Exibir uma mensagem de confirmação antes de remover o produto. (window.confirm) Remover o produto selecionado da lista de produtos no estado.
+3.1 Exibir uma mensagem de confirmação antes de remover o produto. (window.confirm) Remover o produto selecionado da lista de produtos no estado. **- OK!**
 
 4. Atualizar a quantidade de um produto: Permitir ao usuário editar a quantidade em estoque de um produto selecionado. **- OK!**
 
