@@ -34,6 +34,16 @@ function ProductItem({
     }
   };
 
+  const handleRemoveClick = (id: number) => {
+    const confirmDelete = window.confirm(
+      "Tem certeza de que deseja excluir este produto?"
+    );
+
+    if (confirmDelete) {
+      onRemove(id);
+    }
+  };
+
   return (
     <ContainerProduct key={id}>
       <NameProduct>{name}</NameProduct>
@@ -67,7 +77,7 @@ function ProductItem({
             Nova Quantidade
           </ButtonProduct>
         )}
-        <ButtonProduct color={"#910000"} onClick={() => onRemove(id)}>
+        <ButtonProduct color={"#910000"} onClick={() => handleRemoveClick(id)}>
           Remover
         </ButtonProduct>
       </ContainerButton>
