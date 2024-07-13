@@ -22,7 +22,7 @@
 
 ## Desafios;
 
-1. Implementar tema claro ou escuro utilizando o useContext()
+1. Implementar tema claro ou escuro utilizando o useContext() - **Em andamento**
 
 2. Incluir no título de cada aba de produtos, a quantidade de produtos total para aquela aba em específico utilizando o useEffect()
 
