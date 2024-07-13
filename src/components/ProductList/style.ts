@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
 export const ContainerListProduct = styled.div`
-  border-radius: 0 0 08px 08px;
-  background-color: #fff;
+  width: 75%;
+  height: 100vh;
+  overflow-y: auto;
 `;
 export const SubTitleProduct = styled.h2`
-  padding-bottom: 25px;
-  font-size: 28px;
-  margin-left: 10px;
+  margin: 15px;
+  font-size: 34px;
+  color: #3c3c40;
 `;
 export const ListProduct = styled.ul`
   display: flex;
   align-items: center;
-  gap: 92px;
+  justify-content: center;
   flex-wrap: wrap;
 `;

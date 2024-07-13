@@ -3,18 +3,23 @@ import styled from "styled-components";
 export const ContainerProduct = styled.li`
   margin: 05px 16px;
   padding: 15px;
-  width: 25%;
-  border: 4px solid #004793;
-  border-radius: 08px;
+  width: 27%;
+  border: 1px solid #468c73;
+  border-radius: 04px;
   list-style-type: none;
+  background-color: #29a678;
 `;
 export const NameProduct = styled.h3`
   padding: 05px;
   margin-bottom: 15px;
   text-align: center;
-  border-radius: 08px;
-  color: #fff;
-  background-color: #004793;
+  border: 1px solid #468c73;
+  border-radius: 02px;
+  color: #3c3c40;
+  background-color: #fff;
+`;
+export const TextProduct = styled.p`
+  color: #3c3c40;
 `;
 export const ContainerButton = styled.div`
   margin-top: 15px;
@@ -32,4 +37,9 @@ export const ButtonProduct = styled.button`
   cursor: pointer;
   color: #fff;
   background-color: ${(props) => props.color};
+`;
+export const InputProduct = styled.input`
+  padding: 01px 12px;
+  border: 1px solid #3c3c40;
+  border-radius: 02px;
 `;

@@ -6,6 +6,7 @@ import {
   TitleForRegister,
   InputRegister,
   ButtonRegister,
+  LabelRegister,
 } from "./style";
 
 function ProductForm({ onAdd }: ProductFormProps) {
@@ -33,11 +34,11 @@ function ProductForm({ onAdd }: ProductFormProps) {
       description,
       price,
       quantity,
-      onRemove: function (id: number): void {
-        throw new Error("Function not implemented.");
+      onRemove: () => {
+        console.log("onRemove");
       },
-      onEdit: function (id: number, newQuantity: number): void {
-        throw new Error("Function not implemented.");
+      onEdit: () => {
+        console.log("onEdit");
       },
     });
     setName("");
@@ -47,53 +48,51 @@ function ProductForm({ onAdd }: ProductFormProps) {
   }
 
   return (
-    <>
+    <FormRegister action="" onSubmit={handleSubmit}>
       <TitleForRegister>Cadastre um novo Produto</TitleForRegister>
-      <FormRegister action="" onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          PRODUTO:
-          <InputRegister
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            id="name"
-            name="name"
-          />
-        </label>
-        <label htmlFor="description">
-          DESCRIÇÃO:
-          <InputRegister
-            type="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            id="description"
-            name="description"
-          />
-        </label>
-        <label htmlFor="price">
-          PREÇO:
-          <InputRegister
-            type="number"
-            value={price}
-            onChange={(e) => setPrice(Number(e.target.value))}
-            id="price"
-            name="price"
-          />
-        </label>
-        <label htmlFor="quantity">
-          QUANTIDADE:
-          <InputRegister
-            type="number"
-            value={quantity}
-            onChange={(e) => setQuantity(Number(e.target.value))}
-            id="quantity"
-            name="quantity"
-          />
-        </label>
+      <LabelRegister htmlFor="name">
+        Produto*
+        <InputRegister
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          id="name"
+          name="name"
+        />
+      </LabelRegister>
+      <LabelRegister htmlFor="description">
+        Descrição*
+        <InputRegister
+          type="text"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          id="description"
+          name="description"
+        />
+      </LabelRegister>
+      <LabelRegister htmlFor="price">
+        Preço*
+        <InputRegister
+          type="number"
+          value={price}
+          onChange={(e) => setPrice(Number(e.target.value))}
+          id="price"
+          name="price"
+        />
+      </LabelRegister>
+      <LabelRegister htmlFor="quantity">
+        Quantidade*
+        <InputRegister
+          type="number"
+          value={quantity}
+          onChange={(e) => setQuantity(Number(e.target.value))}
+          id="quantity"
+          name="quantity"
+        />
+      </LabelRegister>
 
-        <ButtonRegister type="submit">Adicionar produto</ButtonRegister>
-      </FormRegister>
-    </>
+      <ButtonRegister type="submit">Adicionar produto</ButtonRegister>
+    </FormRegister>
   );
 }
 

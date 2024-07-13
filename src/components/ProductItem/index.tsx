@@ -5,7 +5,9 @@ import {
   ButtonProduct,
   ContainerButton,
   ContainerProduct,
+  InputProduct,
   NameProduct,
+  TextProduct,
 } from "./style";
 
 function ProductItem({
@@ -48,16 +50,16 @@ function ProductItem({
     <ContainerProduct key={id}>
       <NameProduct>{name}</NameProduct>
 
-      <p>
+      <TextProduct>
         <strong>Descrição:</strong> {description}
-      </p>
-      <p>
+      </TextProduct>
+      <TextProduct>
         <strong>Preço:</strong> R${price},00
-      </p>
-      <p>
+      </TextProduct>
+      <TextProduct>
         <strong>Quantidade:</strong>{" "}
         {editId === id ? (
-          <input
+          <InputProduct
             type="number"
             value={newQuantity}
             onChange={(e) => setNewQuantity(Number(e.target.value))}
@@ -65,19 +67,19 @@ function ProductItem({
         ) : (
           quantity
         )}
-      </p>
+      </TextProduct>
 
       <ContainerButton>
         {editId === id ? (
-          <ButtonProduct color={"#079100"} onClick={() => handleSaveClick(id)}>
+          <ButtonProduct color={"#36D99D"} onClick={() => handleSaveClick(id)}>
             Salvar
           </ButtonProduct>
         ) : (
-          <ButtonProduct color={"#004793"} onClick={() => handleEditClick(id)}>
+          <ButtonProduct color={"#3C3C40"} onClick={() => handleEditClick(id)}>
             Nova Quantidade
           </ButtonProduct>
         )}
-        <ButtonProduct color={"#910000"} onClick={() => handleRemoveClick(id)}>
+        <ButtonProduct color={"#a52929"} onClick={() => handleRemoveClick(id)}>
           Remover
         </ButtonProduct>
       </ContainerButton>
