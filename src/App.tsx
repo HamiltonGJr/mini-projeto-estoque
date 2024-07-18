@@ -4,6 +4,7 @@ import GlobalStyle from "./styles/GlobalStyles";
 import ProductForm from "./components/ProductForm";
 import { Product } from "./types/types";
 import ProductList from "./components/ProductList";
+import { ContainerGeral } from "./styles/AppStyles";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -27,14 +28,14 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <div>
+      <ContainerGeral>
         <ProductForm onAdd={handleAddProduct} />
         <ProductList
           product={products}
           onRemove={handleRemoveProduct}
           onEdit={handleEditProduct}
         />
-      </div>
+      </ContainerGeral>
     </>
   );
 }
