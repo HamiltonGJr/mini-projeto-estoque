@@ -71,11 +71,11 @@ function ProductItem({
 
       <ContainerButton>
         {editId === id ? (
-          <ButtonProduct color={"#36D99D"} onClick={() => handleSaveClick(id)}>
+          <ButtonProduct color={"#35a328"} onClick={() => handleSaveClick(id)}>
             Salvar
           </ButtonProduct>
         ) : (
-          <ButtonProduct color={"#3C3C40"} onClick={() => handleEditClick(id)}>
+          <ButtonProduct color={"#2843a3"} onClick={() => handleEditClick(id)}>
             Nova Quantidade
           </ButtonProduct>
         )}

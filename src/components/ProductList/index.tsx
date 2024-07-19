@@ -3,7 +3,6 @@ import React from "react";
 import ProductItem from "../ProductItem";
 import { ProductListProps } from "../../types/types";
 import {
-  ButtonTheme,
   ContainerListProduct,
   HeaderProduct,
   ListProduct,
@@ -15,8 +14,6 @@ function ProductList({ product, onRemove, onEdit }: ProductListProps) {
     <ContainerListProduct>
       <HeaderProduct>
         <SubTitleProduct>Estoque atual</SubTitleProduct>
-
-        <ButtonTheme>Claro</ButtonTheme>
       </HeaderProduct>
 
       <ListProduct>
