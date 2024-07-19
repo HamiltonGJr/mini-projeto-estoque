@@ -2,12 +2,22 @@ import React from "react";
 
 import ProductItem from "../ProductItem";
 import { ProductListProps } from "../../types/types";
-import { ContainerListProduct, ListProduct, SubTitleProduct } from "./style";
+import {
+  ButtonTheme,
+  ContainerListProduct,
+  HeaderProduct,
+  ListProduct,
+  SubTitleProduct,
+} from "./style";
 
 function ProductList({ product, onRemove, onEdit }: ProductListProps) {
   return (
     <ContainerListProduct>
-      <SubTitleProduct>Estoque atual</SubTitleProduct>
+      <HeaderProduct>
+        <SubTitleProduct>Estoque atual</SubTitleProduct>
+
+        <ButtonTheme>Claro</ButtonTheme>
+      </HeaderProduct>
 
       <ListProduct>
         {product.map((product) => (
