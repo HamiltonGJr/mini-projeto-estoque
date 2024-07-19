@@ -25,9 +25,10 @@ export const LabelRegister = styled.label`
 `;
 export const InputRegister = styled.input`
   margin-top: 08px;
-  padding: 10px 16px;
-  border: 1px solid #000;
-  border-radius: 04px;
+  padding: 10px 16px 05px 16px;
+  border: none;
+  border-bottom: 3px solid ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.background01};
 `;
 export const ButtonRegister = styled.button`
   width: 95%;
