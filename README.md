@@ -22,9 +22,9 @@
 
 ## Desafios;
 
-1. Implementar tema claro ou escuro utilizando o useContext() - **Em andamento**
+1. Implementar tema claro ou escuro utilizando o useContext() **- OK!**
 
-2. Incluir no título de cada aba de produtos, a quantidade de produtos total para aquela aba em específico utilizando o useEffect()
+2. Incluir no título de cada aba de produtos, a quantidade de produtos total para aquela aba em específico utilizando o useEffect() **- em andamento**
 
 3. Cada produto deverá ter um valor para compra. Você iniciará sua carteira com 100 “moedas”, ao “adicionar” um produto, sua carteira irá reduzir o total subtraindo o valor do produto em questão. a função “remover” deverá ser função “vender” e cada venda não poderá te dar um lucro maior do que 20% do valor total daquele produto.
 
