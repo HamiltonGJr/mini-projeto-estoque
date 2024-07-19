@@ -4,22 +4,23 @@ export const ContainerProduct = styled.li`
   margin: 05px 16px;
   padding: 15px;
   width: 27%;
-  border: 1px solid #468c73;
   border-radius: 04px;
+  border: 02px solid ${({ theme }) => theme.background02};
   list-style-type: none;
-  background-color: #29a678;
+  background-color: ${({ theme }) => theme.background01};
+  color: ${({ theme }) => theme.color};
 `;
 export const NameProduct = styled.h3`
   padding: 05px;
   margin-bottom: 15px;
   text-align: center;
-  border: 1px solid #468c73;
+  border: 02px solid ${({ theme }) => theme.background02};
   border-radius: 02px;
-  color: #3c3c40;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color};
 `;
 export const TextProduct = styled.p`
-  color: #3c3c40;
+  color: #fff;
 `;
 export const ContainerButton = styled.div`
   margin-top: 15px;
