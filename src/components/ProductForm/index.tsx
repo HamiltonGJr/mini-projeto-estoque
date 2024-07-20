@@ -7,6 +7,7 @@ import {
   InputRegister,
   ButtonRegister,
   LabelRegister,
+  SelectedTypesForm,
 } from "./style";
 
 function ProductForm({ onAdd }: ProductFormProps) {
@@ -90,6 +91,15 @@ function ProductForm({ onAdd }: ProductFormProps) {
           name="quantity"
         />
       </LabelRegister>
+
+      <SelectedTypesForm name="productType" id="productType">
+        <option value="" disabled selected>
+          Qual o tipo de produto?
+        </option>
+        <option value="food">Comida</option>
+        <option value="drink">Bebida</option>
+        <option value="inedible">Não comestível</option>
+      </SelectedTypesForm>
 
       <ButtonRegister type="submit">Adicionar produto</ButtonRegister>
     </FormRegister>

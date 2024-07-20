@@ -27,7 +27,18 @@ export const InputRegister = styled.input`
   margin-top: 08px;
   padding: 10px 16px 05px 16px;
   border: none;
+  font-size: 16px;
   border-bottom: 3px solid ${({ theme }) => theme.color};
+  color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.background01};
+`;
+export const SelectedTypesForm = styled.select`
+  width: 95%;
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 3px solid ${({ theme }) => theme.color};
+  color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.background01};
 `;
 export const ButtonRegister = styled.button`

@@ -13,7 +13,7 @@ function ProductList({ product, onRemove, onEdit }: ProductListProps) {
   return (
     <ContainerListProduct>
       <HeaderProduct>
-        <SubTitleProduct>Estoque atual</SubTitleProduct>
+        <SubTitleProduct>Aplicativo de Estoque</SubTitleProduct>
       </HeaderProduct>
 
       <ListProduct>
