@@ -4,6 +4,7 @@ export type Product = {
   description: string;
   price: number;
   quantity: number;
+  productType: string;
   onRemove: (id: number) => void;
   onEdit: (id: number, newQuantity: number) => void;
 };

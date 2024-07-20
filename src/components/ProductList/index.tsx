@@ -16,19 +16,71 @@ function ProductList({ product, onRemove, onEdit }: ProductListProps) {
         <SubTitleProduct>Aplicativo de Estoque</SubTitleProduct>
       </HeaderProduct>
 
-      <ListProduct>
-        {product.map((product) => (
-          <ProductItem
-            id={product.id}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-            quantity={product.quantity}
-            onRemove={onRemove}
-            onEdit={onEdit}
-          />
-        ))}
-      </ListProduct>
+      <div>
+        <h2>Comida</h2>
+        <ListProduct>
+          {product.map((product) =>
+            product.productType === "food" ? (
+              <ProductItem
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                quantity={product.quantity}
+                productType={product.productType}
+                onRemove={onRemove}
+                onEdit={onEdit}
+              />
+            ) : (
+              ""
+            )
+          )}
+        </ListProduct>
+      </div>
+
+      <div>
+        <h2>Bebida</h2>
+        <ListProduct>
+          {product.map((product) =>
+            product.productType === "drink" ? (
+              <ProductItem
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                quantity={product.quantity}
+                productType={product.productType}
+                onRemove={onRemove}
+                onEdit={onEdit}
+              />
+            ) : (
+              ""
+            )
+          )}
+        </ListProduct>
+      </div>
+
+      <div>
+        <h2>Não comestível</h2>
+        <ListProduct>
+          {product.map((product) =>
+            product.productType === "inedible" ? (
+              <ProductItem
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                quantity={product.quantity}
+                productType={product.productType}
+                onRemove={onRemove}
+                onEdit={onEdit}
+              />
+            ) : (
+              ""
+            )
+          )}
+        </ListProduct>
+      </div>
     </ContainerListProduct>
   );
 }

@@ -17,6 +17,7 @@ function ProductItem({
   price,
   quantity,
   onRemove,
+  productType,
   onEdit,
 }: Product) {
   const [editId, setEditId] = useState<number | null>(null);
@@ -46,6 +47,20 @@ function ProductItem({
     }
   };
 
+  const handleConferiProductType = (productType: string) => {
+    if (productType === "food") {
+      return "Comida";
+    }
+
+    if (productType === "drink") {
+      return "Bebida";
+    }
+
+    if (productType === "inedible") {
+      return "Não comestível";
+    }
+  };
+
   return (
     <ContainerProduct key={id}>
       <NameProduct>{name}</NameProduct>
@@ -67,6 +82,9 @@ function ProductItem({
         ) : (
           quantity
         )}
+      </TextProduct>
+      <TextProduct>
+        <strong>Categoria:</strong> {handleConferiProductType(productType)}
       </TextProduct>
 
       <ContainerButton>

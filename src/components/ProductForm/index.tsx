@@ -15,6 +15,7 @@ function ProductForm({ onAdd }: ProductFormProps) {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
+  const [productType, setProductType] = useState("Qual o tipo de produto?");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -35,6 +36,7 @@ function ProductForm({ onAdd }: ProductFormProps) {
       description,
       price,
       quantity,
+      productType,
       onRemove: () => {
         console.log("onRemove");
       },
@@ -46,6 +48,7 @@ function ProductForm({ onAdd }: ProductFormProps) {
     setDescription("");
     setPrice(0);
     setQuantity(0);
+    setProductType("");
   }
 
   return (
@@ -92,8 +95,8 @@ function ProductForm({ onAdd }: ProductFormProps) {
         />
       </LabelRegister>
 
-      <SelectedTypesForm name="productType" id="productType">
-        <option value="" disabled selected>
+      <SelectedTypesForm onChange={(e) => setProductType(e.target.value)}>
+        <option value="whatIsProduct" disabled selected>
           Qual o tipo de produto?
         </option>
         <option value="food">Comida</option>
