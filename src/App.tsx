@@ -5,7 +5,8 @@ import ProductForm from "./components/ProductForm";
 import { Product } from "./types/types";
 import ProductList from "./components/ProductList";
 import { ButtonTheme, ContainerGeral } from "./styles/AppStyles";
-import { useTheme, ligthTheme } from "./contexts/ThemeContext";
+import { useTheme } from "./contexts/ThemeContext";
+import { ligthTheme } from "./themes/Themes";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
