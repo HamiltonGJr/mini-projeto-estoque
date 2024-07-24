@@ -15,7 +15,7 @@ function ProductForm({ onAdd }: ProductFormProps) {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
-  const [productType, setProductType] = useState("Qual o tipo de produto?");
+  const [productType, setProductType] = useState("");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -95,8 +95,11 @@ function ProductForm({ onAdd }: ProductFormProps) {
         />
       </LabelRegister>
 
-      <SelectedTypesForm onChange={(e) => setProductType(e.target.value)}>
-        <option value="whatIsProduct" disabled selected>
+      <SelectedTypesForm
+        value={productType}
+        onChange={(e) => setProductType(e.target.value)}
+      >
+        <option value="" disabled>
           Qual o tipo de produto?
         </option>
         <option value="food">Comida</option>
